@@ -15,7 +15,7 @@ public class TypeBasedPercentageDecorator extends ProductDecorator{
     }
 
     public double getPrice(){
-        double percentage = productTypeMap.getOrDefault(product.getProductType(),0.0);
+        double percentage = productTypeMap.getOrDefault(getProductType(),0.0);
         double currentPrice = product.getPrice();
         currentPrice -= (currentPrice * percentage)/100;
         return currentPrice;
